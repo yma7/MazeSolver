@@ -4,6 +4,7 @@
  * @version: 03/04/2022
  */
 
+
 import java.util.ArrayList;
 
 public class MazeTester {

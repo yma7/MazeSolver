@@ -1,8 +1,4 @@
-/**
- * Creates a Maze made up of MazeCells
- * @author Ms. Namasivayam
- * @version 03/04/2022
- */
+// MazeSolver by Yuanye Ma
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -146,7 +142,16 @@ public class Maze {
      * @return boolean true/false
      */
     public boolean isValidCell(int row, int col) {
-        // TODO: Complete this function
-        return true;
+        // Checks to see if the cell's row and col's are inside valid parameters
+        if (row >= 0 && row < numRows && col >=0 && col < numCols)
+        {
+            MazeCell mazeCell = mazeGrid[row][col];
+            // Checks to see if it isn't a wall or hasn't been explored and returns true if so
+            if (!mazeCell.isWall() && !mazeCell.isExplored())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
